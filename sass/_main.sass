@@ -1,0 +1,155 @@
+.catalog
+	margin-top: 20px
+	.section__title
+		+rmin(768)
+			padding: 60px 0 40px 0
+	&-list
+		display: grid
+		grid-template-columns: repeat(2,1fr)
+		-webkit-box-align: stretch
+		-ms-flex-align: stretch
+		align-items: stretch
+		margin: 20px 0 0
+		grid-gap: 10px
+		+rmin(768)
+			grid-gap: 20px
+			grid-template-columns: repeat(4,1fr)
+
+.card
+	background: $gray
+	+border-radius(5px)
+	position: relative
+	display: flex
+	flex-direction: column
+
+	&__pic
+		position: relative
+
+		img
+			width: 100%
+			height: 200px
+			object-fit: cover
+			object-position: center
+			+rmin(768)
+				height: 230px
+
+	&__sale,
+	&__top
+		position: absolute
+		font-size: 10px
+		+bold
+		text-align: center
+		color: $w
+		+border-radius(5px)
+		padding: 3px 5px
+
+	&__sale
+		top: 10px
+		left: 10px
+		background: $red
+		+rmin(768)
+			border-radius: 10px
+			font-size: 18px	
+
+	&__top
+		position: absolute
+		bottom: 40px
+		right: 10px
+		background: $blue
+		+rmin(768)
+			position: absolute
+			bottom: 10px
+			border-radius: 10px
+			font-size: 18px
+
+	&__stock
+		display: block
+		background: $orange
+		color: $w
+		+bold
+		text-align: center
+		padding: 7px 10px
+		font-size: 10px
+		+rmin(768)
+			display: none
+			font-size: 18px
+
+	&__info
+		padding: 10px
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		+rmin(768)
+			margin-top: 30px
+		&--inner
+			display: flex
+			flex-direction: column
+			height: 100%
+			width: 100%
+			max-width: 100%
+		&__delivery
+			+rmin(768)
+				justify-content: space-between
+
+	._self
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin-bottom: 4px
+
+	&__name
+		font-size: 14px
+		+bold
+		margin-bottom: 8px
+		+rmin(768)
+			font-size: 22px
+	&__price
+		+med
+		+rmin(768)
+			font-size: 20px
+		&.sale
+			color: $red
+			+rmin(768)
+				font-size: 20px
+	&__oldprice
+		font-size: 12px
+		text-decoration: line-through
+		color: #888
+		+rmin(768)
+			font-size: 14px
+	&__delivery
+		margin-top: 10px
+		color: $vio
+		+med
+		font-size: 10px
+		display: flex
+		justify-content: space-between
+		+rmin(768)
+			width: 100%
+			padding: 15px 0
+			font-size: 16px
+			font-weight: 600
+		img
+			+rmin(768)
+				margin-top: 10px
+				max-width: 15px
+				height: 20px
+	&__btn
+		display: block
+		background: $green
+		color: $w
+		padding: 10px 15px
+		+med
+		font-size: 10px
+		+border-radius(5px)
+		margin-top: 12px
+		text-align: center
+		width: 100%
+		+rmin(768)
+			font-weight: normal
+			padding: 0
+			height: 60px
+			line-height: 60px
+			font-size: 18px
